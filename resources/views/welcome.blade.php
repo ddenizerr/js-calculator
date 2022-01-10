@@ -7,7 +7,7 @@
     <title>JS Calculator</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="{{mix('css/app.css')}}" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -395,7 +395,7 @@
     <!-- JS -->
     <script src="resources/js/app.js" defer></script>
     <!-- CSS -->
-    <link href="resources/css/app.css" rel="stylesheet">
+    <link href={{asset('css/app.css')}} rel="stylesheet" type="text/css">
 
     <style>
         body {
@@ -420,42 +420,48 @@
         </div>
     @endif
 
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-        <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="p-6">
-                    <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                             stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
-                            <path
-                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                        <div class="ml-4 text-lg leading-7 font-semibold"><p
-                                class="text-gray-900 dark:text-white">Calculator</p>
-                        </div>
-                    </div>
+    <div class="row">
 
-                    <div class="calculator-grid">
-                        <div class="output">
-                            <div class="previous-operand">
-                                <div class="current-operand">
+        <div class="calculator-grid">
+            <div class="output">
+                <div class="previous-operand">
+                    <div class="current-operand">
 
-                                </div>
-                            </div>
-                        </div>
-                        <button class="span-two">AC</button>
-                        <button class="span-two">DEL</button>
                     </div>
                 </div>
             </div>
+            <button class="span-two">AC</button>
+            <button>DEL</button>
+            <button>÷</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>+</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>-</button>
+            <button>.</button>
+            <button>0</button>
+            <button>=</button>
         </div>
+    </div>
 
+
+    <div class="row">
         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
             <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                 Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
             </div>
         </div>
     </div>
+
+
+</div>
 </div>
 </body>
 </html>
